@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Anvesh profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-light">
+    <a class="navbar-brand" href="#">
+      <!-- <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""> -->
+    </a>
+  </nav>
+  <div class="jumbotron text-center pb-0">
+    <div class="container bg">
+      <!-- <div class="card bg-dark text-white">
+      <img class="card-img" src="https://via.placeholder.com/1000" alt="Card image">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Last updated 3 mins ago</p>
+      </div>
+    </div> -->
+      <div class="profile-container">
+        <img class="profile-img" src="./profile.jpg" alt="Card image">
+      </div>
+    </div>
+    <div class="name-container mb-4 mt-5">
+      <h4>Manoj Kumar J</h4>
+    </div>
+    <div class="container">
+      <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about"
+            aria-selected="true">About</a>
+        </li>
+        <li class="nav-item" onclick="displayPagce()">
+          <a class="nav-link" id="document-tab" data-toggle="tab" href="#document" role="tab" aria-controls="document"
+            aria-selected="false">Documents</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+        <div class="row">
+          <div class="col-sm-4 col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td>DOB</td>
+                      <td>24-06-1993</td>
+                    </tr>
+                    <tr>
+                      <td>Phone Number</td>
+                      <td>08143773436</td>
+                    </tr>
+                    <tr>
+                      <td class="text-danger">Emergency Contact</td>
+                      <td class="text-danger">8500051627</td>
+                    </tr>
+                    <tr>
+                      <td>Building Number </td>
+                      <td>1/32</td>
+                    </tr>
+                    <tr>
+                      <td>Street </td>
+                      <td>Bazaar </td>
+                    </tr>
+                    <tr>
+                      <td>From</td>
+                      <td>Thadukupeta </td>
+                    </tr>
+                    <tr>
+                      <td>District</td>
+                      <td>Chittoor</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="tab-pane fade" id="document" role="tabpanel" aria-labelledby="document-tab">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card document" onclick="displayDoc('./RCBikeFz .pdf','Bike RC Book')">
+              <div class="card-body text-center">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1200px-PDF_file_icon.svg.png"
+                  alt="..." class="img-thumbnail mb-2">
+              </div>
+              <div class="card-footer">
+                <h5 class="card-title mb-0">Bike RC Book </h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card document" onclick="displayDoc('./RCCarNissan.pdf','Car RC Book ')">
+              <div class="card-body text-center">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1200px-PDF_file_icon.svg.png"
+                  alt="..." class="img-thumbnail mb-2">
+              </div>
+              <div class="card-footer">
+                <h5 class="card-title mb-0">Car RC Book </h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card document" onclick="displayDoc('./PollutionCar.pdf','Pollution Car')">
+              <div class="card-body text-center">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1200px-PDF_file_icon.svg.png"
+                  alt="..." class="img-thumbnail mb-2">
+              </div>
+              <div class="card-footer">
+                <h5 class="card-title mb-0">Pollution Car</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe id="iframepdf" src=""></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login for document</h5>
+        <button type="button" class="close" onclick="loginModalClose()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="loginForm">
+        <!-- form with an ID so we can identify it, now includes both the textbox and the button within it -->
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="modalpass" class="col-form-label">Password:</label>
+            <input type="password" name="modalpass" class="form-control" id="modalpass">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="loginModalClose()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+  function displayDoc(id, title) {
+    $("#exampleModal").modal();
+    $('#iframepdf').attr("src", id);
+    $('#exampleModalLabel').text(title);
+    // alert("The ID is "+id);
+  }
+  function displayPagce() {
+    var pass1 = "manoj@123";
+
+    $('#loginModal').modal({
+      backdrop: 'static',
+      keyboard: false
+    })
+
+
+    //handle the form's "submit" event
+    $("#loginForm").submit(function (event) {
+      event.preventDefault(); //stop a full postback
+
+      var password = $("#modalpass").val(); //get the entered value from the password box
+
+      if (password == pass1) {
+        $('#loginModal').modal('hide');
+        $('[href="#document"]').tab('show');
+        $("#modalpass").val('');
+
+      } else {
+        alert('Password is incorrect.');
+        $("#modalpass").val('');
+      }
+    });
+  }
+
+  function loginModalClose() {
+        $('#loginModal').modal('hide');
+         $('[href="#about"]').tab('show');
+    }
+</script>
+
+</html>
